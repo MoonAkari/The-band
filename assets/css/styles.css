@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+    max-width: 100%;
+}
+
+.white-text{
+    color: white !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.form-control{
+    padding: 11px;
+    border: 1px solid #ccc;
+}
+
+.form-submit{
+    font-size: 15px;
+    border: 0;
+    background-color: #009688;
+    color: white;
+}
+
+.form-submit:hover{
+    cursor: pointer;
+    opacity: .7 ;
+}
+
+.black-button{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 11px 16px;
+    border: none;
+    background-color: black;
+    text-align: center;
+}
+
+.black-button:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    color: black;
+}
+
+.js-open-header{
+    height: auto !important;
+}
+
+.js-close-header{
+    height: 46px;
+}
+
+#header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: 46px;
+    background-color: black;
+}
+
+#nav {
+    display: inline-flex;
+    font-size: 16px;
+    position: relative;
+    top: 0;
+}
+
+#nav li {
+    list-style-type: none;
+}
+
+#nav li a {
+    display: flex;
+    text-decoration: none;
+    padding: 12px 24px;
+    height: 46px;
+    color: white;
+    align-items: center;
+}
+
+#nav >li >a{
+    text-transform: uppercase;
+}
+
+#nav >li:hover >a{
+    background-color: #ccc;
+    color: black;
+}
+
+
+#nav .subnav {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 46px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(57, 57, 57);
+}
+
+#nav li:hover .subnav {
+    display: flex;
+}
+ 
+#nav .subnav li:hover a{
+    display: flex ;
+    background-color: #ccc;
+}
+
+#nav .subnav a {
+    min-width: 140px;
+    max-width: 100%;
+    padding: 8px 16px;
+    color: black;
+}
+
+#nav .arrow-down {
+    padding: 4px;
+}
+
+#header .menu-icon{
+    display: none;
+}
+
+#header .nav-search{
+    float: right;
+    height: 46px;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 0 22px;
+    font-size: 18px;
+}
+
+#header .nav-search:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#slider {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: top right/ cover no-repeat url('/TheBand/assets/css/image/chicago.jpg');
+    color: white;
+}
+
+#slider .text-slider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 32px;
+    margin-bottom: 15px;
+}
+
+#slider .text-slider .title-h1 {
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#slider .text-slider h1{
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#content #band{
+    max-width: 100%;
+}
+
+#content .band-content, #content .contact-box{
+    padding: 64px 0;
+}
+ 
+#content .section-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+#content .section-subtitle{
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    opacity: .5;
+    margin: 15px 0;
+}
+
+#content .scrip{
+    width: 768px;
+    max-width: 100%;
+    padding: 15px 16px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .member-box{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#content .member-box .member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+}
+
+#content .member-box .member img{
+    max-width: 70%;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+#content .tour-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 64px 0;
+    background-color: black;
+}
+
+.tour-box .ticket-list {
+    font-size: 15px;
+    width: 766px;
+    max-width: 100%;
+    margin: auto;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    list-style: none;
+}
+
+.tour-box .ticket-list li{
+    color: #757575;
+    padding: 8px 16px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.tour-box .sold-out {
+    background: #f44336;
+    padding: 2px 8px;
+    margin: 16px;
+}
+
+.tour-box .stock {
+    float: right;
+    padding: 4px 8px;
+    background: black;
+    border-radius: 50%;
+    margin: -3px;
+}
+
+#content .place-box{
+    width: 768px;
+    max-width: 100%;
+    margin: auto;
+    padding: 16px 0;
+    font-size: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.place-box .place-list{
+    float: left;
+    width: 33.3333%;
+    padding: 0 8px;
+}
+
+.place-box .place-list img{
+    display: block;
+    width: 100%;
+}
+
+.place-box .place-list img:hover{
+    opacity: .7;
+}
+
+.place-box .place-list .place-desc{
+    background-color: white;
+    padding: 16px;
+}
+
+.place-box .place-desc h3{
+    padding-bottom: 15px;
+}
+
+.place-box .place-desc .date{
+    padding-bottom: 15px;
+    opacity: .6;
+}
+
+.place-box .place-desc p{
+    padding-bottom: 15px;
+    line-height: 1.4;
+}
+
+#modal{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+}
+
+#modal.open{
+    display: flex;
+}
+
+#modal-content {
+    width: 900px;
+    max-width: 100%;
+    margin: 36px calc(10%);
+    animation: modalFadeIn ease .4s;
+}
+
+#modal-content .modal-header {
+    position: relative;
+    padding: 42px 16px;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 4px;
+    background-color: #009688;
+
+}
+
+.modal-header .close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    padding: 15px 11px;
+}
+
+.modal-header .close-icon:hover{
+    cursor: pointer;
+    opacity: .6;
+}
+
+.modal-header >h2 >i {
+    padding-right: 12px;
+}
+
+.modal-header .modal-ticket {
+    font-weight: lighter;
+}
+
+#modal-content .modal-body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0 16px;
+}
+
+.modal-body label{
+    margin: 28px 0 16px;
+}
+
+.modal-body .pay{
+    margin: 16px 0;
+    padding: 17px;
+}
+
+.modal-body .pay i{
+    padding-left: 4px;
+    font-weight: bolder;
+}
+
+#modal-content .modal-footer {
+    display: flex;
+    justify-content: right;
+    font-size: 15px;
+    padding: 16px 16px 24px;
+    background-color: white;
+}
+
+.modal-footer a{
+    margin: 0 4px;
+    color: #2196F3;
+}
+
+.contact-box .contact-content{
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    max-width: 100%;
+  
+}
+
+.contact-content .contact-info {
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-left: 8px;
+}
+
+.contact-content .contact-info i{
+    display: inline-block;
+    width: 30px;
+    margin: 0;
+}
+
+.contact-content .contact-input{
+    width: 50%;
+}
+
+.contact-content .contact-input .name-email{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-input .name-email input{
+    margin: 8px;
+    width: 50%;
+}
+
+.contact-content .contact-input .message{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-input .message input{
+    margin: 8px;
+}
+
+.contact-box .black-button{
+    float: right;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+#map .map-img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#footer {
+    max-width: 100%;
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#footer .social i:hover,
+#footer .credit a:hover{
+    color: rgba(0,0,0,.4);
+}
+
+#footer .social i{
+    color: rgba(0,0,0,.7);
+    text-decoration: none;
+}
+
+#footer .social a{
+    text-decoration: none;
+}
+
+#footer .credit a{
+    color: rgba(0,0,0,.7);
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
